@@ -1,4 +1,4 @@
-#
+#!
 # fullofshit.rb by Scott Gordon 2014
 #
 require 'rubygems'
