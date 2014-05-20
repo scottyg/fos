@@ -4,8 +4,8 @@ require 'rubygems'
 require "active_support"
 
 # User Variables
-username = 'scott'
-folder = "fullofshit"
+username = 'scott' # System Username (Cannot contain spaces)
+folder = "archive" # New Folder Name
 
 #System Paths
 desktop = "/Users/#{username}/Desktop"
