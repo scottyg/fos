@@ -5,7 +5,7 @@ require 'rubygems'
 require "active_support"
 
 # User Variables
-username = 'scottgordon'
+username = 'scott'
 folder = "fullofshit"
 
 #System Paths
