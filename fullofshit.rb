@@ -1,6 +1,5 @@
-#!
+#!/usr/bin/env ruby
 # fullofshit.rb by Scott Gordon 2014
-#
 require 'rubygems'
 require "active_support"
 
