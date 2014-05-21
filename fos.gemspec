@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Fos::VERSION
   spec.authors       = ["Scott Gordon"]
   spec.email         = ["me@scottyg.net"]
-  spec.summary       = %q{A File Archiver}
-  spec.description   = %q{A File Archiver}
+  spec.summary       = %q{A Desktop and Download Folder Archiver}
+  spec.description   = %q{A Desktop and Download Folder Archiver}
   spec.homepage      = "http://www.iamscottyg.com"
   spec.license       = "MIT"
 
