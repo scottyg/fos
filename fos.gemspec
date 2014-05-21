@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["me@scottyg.net"]
   spec.summary       = %q{A Desktop and Download Folder Archiver}
   spec.description   = %q{A Desktop and Download Folder Archiver}
-  spec.homepage      = "http://www.iamscottyg.com"
+  spec.homepage      = "http://scottyg.github.io/fos/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
