@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'fos'
+
+action = Fos::Action.new
+action.move
