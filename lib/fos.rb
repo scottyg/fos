@@ -12,51 +12,41 @@ module Fos
       desktop = "#{username}/Desktop"
       downloads = "#{username}/Downloads"
       today = Time.now.strftime("%B %e %Y").gsub(' ', '_').gsub(/:.*/, '')
-
-      # Get Files
-      desktop_files = Dir.entries(desktop)
-      download_files = Dir.entries(downloads)
-
-      # Create Folders
-      if !File.directory?("#{desktop}/#{folder}")
-        `mkdir #{desktop}/#{folder}`
-      end
-      if !File.directory?("#{desktop}/#{folder}/#{today}")
-        `mkdir #{desktop}/#{folder}/#{today}`
-      end
-      if !File.directory?("#{downloads}/#{folder}")
-        `mkdir #{downloads}/#{folder}`
-      end
-      if !File.directory?("#{downloads}/#{folder}/#{today}")
-        `mkdir #{downloads}/#{folder}/#{today}`
-      end
-
-      #Clean Desktop
-      # Remove System Folders And Our New Folder
-      desktop_files.delete_if{|x| (x =~ /^\./) == 0 }
-      desktop_files.delete_if{|x| x == "#{folder}"}
-      desktop_files.delete_if{|x| (x =~ /Macintosh/) == 0}
-
-      # Clean File names
-      desktop_files = desktop_files.map{|x| x.gsub(" ", '\ ').gsub("(", '\(').gsub(")", '\)')}
-
-      # Do The Moving
-      desktop_files.each do |filename|
-        `mv #{desktop}/#{filename} #{desktop}/#{folder}/#{today}`
-      end
-
-      #Clean Downloads
-      # Remove System Folders And Our New Folder
-      download_files.delete_if{|x| (x =~ /^\./) == 0 }
-      download_files.delete_if{|x| x == "#{folder}"}
-      download_files.delete_if{|x| (x =~ /Macintosh/) == 0}
-
-      # Clean File names
-      download_files = download_files.map{|x| x.gsub(" ", '\ ').gsub("(", '\(').gsub(")", '\)')}
-
-      # Do The Moving
-      download_files.each do |filename|
-        `mv #{downloads}/#{filename} #{downloads}/#{folder}/#{today}`
+      
+      default_folders = ['Desktop', 'Downloads']
+      
+      # Do for each folder
+      default_folders.each do |this_folder|
+        # Get Path
+        current_path = "#{username}/#{this_folder}"
+          
+        # Get Files
+        current_files = Dir.entries(current_path)
+          
+        # Create Folders
+        if !File.directory?("#{current_path}/#{folder}")
+          `mkdir #{current_path}/#{folder}`
+        end
+        if !File.directory?("#{current_path}/#{folder}/#{today}")
+          `mkdir #{current_path}/#{folder}/#{today}`
+        end
+          
+        #Clean Desktop
+        # Remove System Folders And Our New Folder
+        current_files.delete_if{|x| (x =~ /^\./) == 0 }
+        current_files.delete_if{|x| x == "#{folder}"}
+        current_files.delete_if{|x| (x =~ /Macintosh/) == 0}
+          
+        # Clean File names
+        current_files = current_files.map{|x| x.gsub(" ", '\ ').gsub("(", '\(').gsub(")", '\)')}
+        # Do The Moving
+        current_files.each do |filename|
+          `mv #{current_path}/#{filename} #{current_path}/#{folder}/#{today}`
+        end
+        
+        # Finished
+        puts "Cleaned #{current_path}"
+        
       end
       
     end
