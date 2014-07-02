@@ -1,6 +1,6 @@
 # fos
 
-A Desktop and Download Folder Archiver
+A Desktop and Download Folder Archiver [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
 
 ## Installation
 
