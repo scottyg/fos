@@ -4,11 +4,16 @@ A Desktop and Download Folder Archiver
 
 ## Installation
 
-    $ gem install fos
+    gem install fos
 
 ## Usage
 
-    $ fos
+    fos
+
+## Roadmap
+
+- Archive specific paths
+- Zip archive
 
 ## Contributing
 
