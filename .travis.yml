@@ -2,3 +2,9 @@ language: ruby
 rvm:
   - 1.9.3
 script: "bundle exec rake"
+notifications:
+  email:
+    recipients:
+      - me@scottyg.net
+    on_failure: change
+    on_success: never
