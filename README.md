@@ -1,6 +1,8 @@
 # fos
 
-A Desktop and Download Folder Archiver [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
+A folder archive tool for Linux or Mac
+
+[![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
 
 ## Installation
 
@@ -12,8 +14,9 @@ A Desktop and Download Folder Archiver [![Build Status](https://travis-ci.org/sc
 
 ## Roadmap
 
-- Archive specific paths
-- Zip archive
+- Archive specific names[testing]
+- Archive specific paths[testing]
+- Zip archive[testing]
 
 ## Contributing
 

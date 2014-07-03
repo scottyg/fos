@@ -3,4 +3,4 @@
 require 'fos'
 
 action = Fos::Action.new
-action.move
+action.archive

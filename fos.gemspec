@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Fos::VERSION
   spec.authors       = ["Scott Gordon"]
   spec.email         = ["me@scottyg.net"]
-  spec.summary       = %q{A Desktop and Download Folder Archiver}
-  spec.description   = %q{A Desktop and Download Folder Archiver}
+  spec.summary       = %q{A folder archive tool for Linux and Mac}
+  spec.description   = %q{A folder archive tool for Linux and Mac}
   spec.homepage      = "http://scottyg.github.io/fos/"
   spec.license       = "MIT"
 
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "colorize", "~> 0.7.3"
+  
 end
