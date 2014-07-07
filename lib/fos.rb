@@ -8,8 +8,8 @@ module Fos
     def archive
 
       options = {}
-	  
-	  # Option parser 'optparse'
+      
+      # Option parser 'optparse'
       opt_parser = OptionParser.new do |opt|
         opt.banner = "Fos is a folder archive tool for Linux or Mac."
         opt.separator  ""
@@ -36,29 +36,35 @@ module Fos
           options[:version] = version
         end
       end
-	  
-	  # Option variables
-      opt_parser.parse!
+
+      begin opt_parser.parse! ARGV
+      rescue OptionParser::InvalidOption => e
+        puts e
+        puts "Try fos -h"
+        exit 1
+      end
+      
+      # Option variables
       path = options[:path] || nil
       archive_name = options[:name] || 'archive'
       zip = options[:zip] || false
       version = options[:version] || false
       help = options[:help] || false
-	  
-	  # General variables
+      
+      # General variables
       user_path = File.expand_path('~')
       folders = ["#{user_path}/Desktop", "#{user_path}/Downloads"]
       today = Time.now.strftime("%B %e %Y").gsub(' ', '_').gsub(/:.*/, '')
-	  
-	  # Look for commands
+      
+      # Look for commands
       case ARGV[0]
       when "shit"
         puts "I can clean that up for you"
       else
-     	do_archive = true
+         do_archive = true
       end
       
-	  # Check if help or version option, Disable archive
+      # Check if help or version option, Disable archive
       if help == true || version == true
         do_archive = false
       end
@@ -100,8 +106,8 @@ module Fos
           end
         
           # Do zip if option is set
-		  if zip == true
-		    puts "[ " + "Zipping".yellow + ": #{current_path} ]"
+          if zip == true
+            puts "[ " + "Zipping".yellow + ": #{current_path} ]"
             `zip -j -r #{current_path}/#{archive_name}.zip #{current_path}/#{archive_name}`
             # Add extension name for finishing message
             archive_name = archive_name + ".zip"
