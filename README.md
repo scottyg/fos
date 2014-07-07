@@ -11,7 +11,9 @@ A folder archive tool for Linux or Mac
 ## Usage
 
     $ fos
+    
 or
+
     $ fos -h
 
 ## Roadmap
