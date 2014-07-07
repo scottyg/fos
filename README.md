@@ -2,7 +2,7 @@
 
 A folder archive tool for Linux or Mac
 
-[![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
+[![Gem Version](https://badge.fury.io/rb/fos.svg)](http://badge.fury.io/rb/fos) [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
 
 ## Installation
 
