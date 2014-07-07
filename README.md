@@ -6,11 +6,13 @@ A folder archive tool for Linux or Mac
 
 ## Installation
 
-    gem install fos
+    $ gem install fos
 
 ## Usage
 
-    fos
+    $ fos
+or
+    $ fos -h
 
 ## Roadmap
 
