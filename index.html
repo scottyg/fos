@@ -13,13 +13,14 @@
 		<section id="top">
 			<div class="row">
 				<div id="header" class="large-12 medium-12 columns">
-					<h1 class="text-center">fos</h1>
-					<p class="text-center">a folder archive tool for Linux or Mac</p>
-					<p class="nav text-center">
-						<a href="#terminal" class="install">Installation</a> | 
-						<a href="#terminal" class="use">Usage</a> | 
-						<a href="#terminal" class="dev">Development</a>
-					</ul>
+					<h1 class="fader">fos</h1>
+					<p class="desc text-center">a folder archive tool for Linux or Mac</p>
+					<p id="nav" class="nav text-center">
+						<a href="#nav" class="about active">About</a> 
+						<a href="#nav" class="install">Installation</a> 
+						<a href="#nav" class="use">Usage</a>
+						<a href="#nav" class="dev">Development</a>
+					</p>
 				</div>
 			</div>
 			<div class="row">
@@ -33,7 +34,45 @@
 							</div>
 						</div>
 						<div class="content">
-							$ fos
+							<div id="terminal-about" class="terminal-content">
+<pre>$ fos -h
+<span class="next">Fos is a folder archive tool for Linux or Mac.
+
+Archives ~/Desktop and ~/Downloads by default
+
+Usage: fos [OPTIONS]
+
+Options
+    -p, --path PATH                  Input path(s), BE CAREFUL WITH THIS
+    -n, --name NAME                  Output name, default is archive
+    -z, --zip                        Output as zip file, default is false
+    -h, --help                       help
+    -v, --version                    version</span>
+</pre>
+							</div>
+							<div id="terminal-install" class="terminal-content hide">
+<pre>$ gem install fos
+<span class="next">Successfully installed fos-2.0.0
+Parsing documentation for fos-2.0.0
+Done installing documentation for fos after 0 seconds
+1 gem installed</span>
+</pre>
+							</div>
+							<div id="terminal-use" class="terminal-content hide">
+<pre>$ fos
+<span class="next">[ <span class="orange">Creating</span>: /Users/scottyg/Desktop/archive/July_10_2014 ]
+[ <span class="orange">Archiving</span>: /Users/scottyg/Desktop/file.png ]
+[ <span class="green">Archived</span>: /Users/scottyg/Desktop into /Users/scottyg/Desktop/archive ]
+[ <span class="orange">Creating</span>: /Users/scottyg/Downloads/archive/July_10_2014 ]
+[ <span class="orange">Archiving</span>: /Users/scottyg/Downloads/file.png ]
+[ <span class="green">Archived</span>: /Users/scottyg/Downloads into /Users/scottyg/Downloads/archive ]</span>
+</pre>
+							</div>
+							<div id="terminal-dev" class="terminal-content hide">
+<pre>$ bundle install
+$ rake install
+</pre>
+							</div>
 						</div>
 					</div>
 	
@@ -42,11 +81,51 @@
 		</section>	
 		<section id="info">
 			<div class="row">
-				<div class="large-12 margin-12 columns" id="info-content">
-					<h1>About</h1>
-					<p>
-						Fos archives <span class='code'>~/Desktop</span> and <span class='code'>~/Downloads</span> by default, but can easily archive any folder.
-					</p>
+				<div class="large-12 margin-12 columns">
+					<div id="info-about" class="info-content">
+						<h1>About</h1>
+						<p>
+							Fos is a folder archive tool for Linux or Mac.
+						</p>
+						<p>
+							By default Fos archives <code>~/Desktop</code> and <code>~/Downloads</code>, but can easily archive any folder.
+						</p>
+						<p>
+							<a href="http://badge.fury.io/rb/fos"><img src="https://badge.fury.io/rb/fos.svg" alt="Gem Version" height="18"></a>
+						</p>
+					</div>
+					<div id="info-install" class="info-content hide">
+						<h1>Installation</h1>
+						<p>
+							Fos is a Ruby Gem and can be easily installed with the command <code class="cli">gem install fos</code>.
+						</p>
+						<p>
+							If you do not yet have <a href="https://www.ruby-lang.org/en/installation/">ruby installed</a> you will need to do that first.
+						</p>
+					</div>
+					<div id="info-use" class="info-content hide">
+						<h1>Usage</h1>
+						<p>
+							Basic usage is <code class="cli">fos</code> and archives <code>~/Desktop</code> and <code>~/Downloads</code>.
+						</p>
+<pre>
+<code>
+Options
+    -p, --path PATH                  Input path(s), BE CAREFUL WITH THIS
+    -n, --name NAME                  Output name, default is archive
+    -z, --zip                        Output as zip file, default is false
+    -h, --help                       help
+    -v, --version                    version
+</code>
+</pre>
+					</div>
+					<div id="info-dev" class="info-content hide">
+						<h1>Development</h1>
+						<p>
+							Coming soon.
+						</p>
+					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -57,11 +136,6 @@
 				</div>
 				<div class="large-6 medium-6 small-6 columns text-right">
 					<p><a href="https://github.com/scottyg/fos/fork">Fork on Github</a> <i class="fa fa-github fa-lg"></i></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-12 medium-12 columns">
-					<p class="text-center"><a href="http://badge.fury.io/rb/fos"><img src="https://badge.fury.io/rb/fos.svg" alt="Gem Version" height="18"></a></p>
 				</div>
 			</div>
 		</footer>
