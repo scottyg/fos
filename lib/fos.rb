@@ -2,11 +2,13 @@
 require "fos/version"
 require 'optparse'
 require 'colorize'
+require 'yaml'
 
 module Fos
+  
   class Action
     def archive
-
+     
       options = {}
       
       # Option parser 'optparse'
@@ -44,18 +46,29 @@ module Fos
         exit 1
       end
       
+      user_path = File.expand_path('~')
+      
+      if !File.directory?("#{user_path}/.fos")
+        `mkdir #{user_path}/.fos`
+        `touch #{user_path}/.fos/config.yml`
+        open("#{user_path}/.fos/config.yml", 'w') { |f|
+          f.puts "name: archive"
+          f.puts "paths: [#{user_path}/Desktop, #{user_path}/Downloads]"
+        }
+      end
+      
+      hash = YAML.load(File.read("#{user_path}/.fos/config.yml"))
+      
       # Option variables
       path = options[:path] || nil
-      archive_name = options[:name] || 'archive'
+      archive_name = options[:name] || hash['name']
       zip = options[:zip] || false
       version = options[:version] || false
       help = options[:help] || false
-      
-      # General variables
-      user_path = File.expand_path('~')
-      folders = ["#{user_path}/Desktop", "#{user_path}/Downloads"]
+	  
+      folders = hash['paths']
       today = Time.now.strftime("%B %e %Y").gsub(' ', '_').gsub(/:.*/, '')
-      
+            
       # Look for commands
       case ARGV[0]
       when "shit"
@@ -108,9 +121,9 @@ module Fos
           # Do zip if option is set
           if zip == true
             puts "[ " + "Zipping".yellow + ": #{current_path} ]"
-            `zip -j -r #{current_path}/#{archive_name}.zip #{current_path}/#{archive_name}`
+            `zip -r #{current_path}/#{archive_name}.zip #{current_path}/#{archive_name}`
             # Add extension name for finishing message
-            archive_name = archive_name + ".zip"
+            # archive_name = archive_name + ".zip"
           end
           
           # Finished
