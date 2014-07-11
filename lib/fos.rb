@@ -48,6 +48,7 @@ module Fos
       
       user_path = File.expand_path('~')
       
+      # Config file
       if !File.directory?("#{user_path}/.fos")
         `mkdir #{user_path}/.fos`
         `touch #{user_path}/.fos/config.yml`
@@ -84,7 +85,10 @@ module Fos
       
       # Set new path if option is set
       if !path.nil?
-        folders = [ path ]
+      	folders = path.split(',')
+        folders.each do |f|
+          f.sub! "~", "#{user_path}"
+        end
       end
       
       if do_archive == true
