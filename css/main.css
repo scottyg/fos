@@ -130,6 +130,7 @@ a:hover, a:focus{
 	padding: 15px;
 	font-family: 'Lekton', sans-serif;
 	font-weight: 300;
+	overflow-x: hidden;
 }
 span.next{
 	display: none;
