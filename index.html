@@ -108,6 +108,10 @@ $ rake install
 						<p>
 							Basic usage is <code class="cli">fos</code> and archives <code>~/Desktop</code> and <code>~/Downloads</code>.
 						</p>
+						
+						<p>
+							<code class="cli">fos -h</code> shows you options.
+						</p>
 <pre>
 <code>
 Options
@@ -117,7 +121,23 @@ Options
     -h, --help
     -v, --version
 </code>
+
 </pre>
+
+					<h4>Examples:</h4>
+					<p>
+						<code class="cli">fos -p /path/to/folder</code> Archives the contents of <code>/path/to/folder</code> into <code>/path/to/folder/archive</code>
+					</p>
+					<p>
+						<code class="cli">fos -n new_name</code> Archives the contents of <code>~/Desktop</code> and <code>~/Downloads</code> into <code>~/Desktop/new_name</code> and <code>~/Downloads/new_name</code> respectively.
+					</p>
+					<p>
+						<code class="cli">fos -z</code> Archives and zips the contents of <code>~/Desktop</code> and <code>~/Downloads</code> into <code>~/Desktop/archive.zip</code> and <code>~/Downloads/archive.zip</code> respectively.
+					</p>
+					<p>
+						<code class="cli">fos -p /path/to/folder -n new_name -z</code> Archives and zips the contents of <code>/path/to/folder</code> into  <code>/path/to/folder/new_name.zip</code>.
+					</p>
+					<p>Config file located at <code>~/.fos/config.yml</code></p>
 					</div>
 					<div id="info-dev" class="info-content hide">
 						<h1>Development</h1>
@@ -132,10 +152,10 @@ Options
 		<footer>
 			<div class="row">
 				<div class="large-6 medium-6 small-6 columns">
-					<p><strong>fos</strong> by <a href="http://iamscottyg.com">Scotty G</a></p>
+					<p>fos by <a href="http://iamscottyg.com">Scotty G</a> &copy; MIT License</p>
 				</div>
 				<div class="large-6 medium-6 small-6 columns text-right">
-					<p><a href="https://github.com/scottyg/fos/fork">Fork on Github</a> <i class="fa fa-github fa-lg"></i></p>
+					<p><a href="https://github.com/scottyg/fos/">View on Github <i class="fa fa-github fa-lg"></i></a></p>
 				</div>
 			</div>
 		</footer>
