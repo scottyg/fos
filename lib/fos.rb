@@ -123,11 +123,13 @@ module Fos
             puts "[ " + "Zipping".yellow + ": #{current_path} ]"
             `zip -r #{current_path}/#{archive_name}.zip #{current_path}/#{archive_name}`
             # Add extension name for finishing message
-            # archive_name = archive_name + ".zip"
+            tmp_archive_name = archive_name + ".zip"
+          else
+            tmp_archive_name = archive_name
           end
           
           # Finished
-          puts "[ " + "Archived".colorize(:green) + ": "+"#{current_path} "+"into"+" #{current_path}/#{archive_name}"+" ]"
+          puts "[ " + "Archived".colorize(:green) + ": "+"#{current_path} "+"into"+" #{current_path}/#{tmp_archive_name}"+" ]"
           
         end
       end
