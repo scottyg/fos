@@ -144,6 +144,8 @@ span.next{
 .info-content p code{
 	padding: 5px;
 	color: #d91a1a;
+	max-width: 600px;
+	overflow-x: scroll;
 }
 .info-content p code.cli{
 	background-color: #202020;
