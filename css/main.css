@@ -123,13 +123,13 @@ a:hover, a:focus{
 
 #terminal .content{
 	background-color: #202020;
+	min-height: 200px;
 	height: 200px;
 	color: #fff;
 	clear: both;
 	padding: 15px;
 	font-family: 'Lekton', sans-serif;
 	font-weight: 300;
-	overflow: hidden;
 }
 span.next{
 	display: none;
