@@ -1,6 +1,6 @@
 # DEPRECATED
 
-[![Gem Version](https://badge.fury.io/rb/fos.svg)](http://badge.fury.io/rb/fos) [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/) [![Gem Version](https://badge.fury.io/rb/fos.svg)](http://badge.fury.io/rb/fos) [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
 
 Fos is a folder archive tool for Linux or Mac. By default Fos archives ~/Desktop and ~/Downloads, but can easily archive any folder.
 
