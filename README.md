@@ -1,4 +1,4 @@
-# fos
+# DEPRECATED
 
 [![Gem Version](https://badge.fury.io/rb/fos.svg)](http://badge.fury.io/rb/fos) [![Build Status](https://travis-ci.org/scottyg/fos.svg?branch=master)](https://travis-ci.org/scottyg/fos)
 
